@@ -1,14 +1,17 @@
 
 import React,{ useState } from 'react';
 import './App.css';
+import ImageGenerator from './components/ImageGenerator';
+import ChatComponent from './components/ChatComponent';
+import RecipeGenerator from './components/RecipeGenerator';
+
 
 function App() {
 
 const [ activeTab, setActiveTab] = useState('image-generator')
 
   const handleTabChange = (tab) => {
-    alert(tab)
-    setActiveTab(tab);
+    setActiveTab(tab)
   };
 
   return (
@@ -24,9 +27,9 @@ const [ activeTab, setActiveTab] = useState('image-generator')
           Recipe Generator</button>
 
         <div>
-          {activeTab === 'image-generator' && <h2>Image Generator</h2>}
-          {activeTab === 'chat' && <h2>Chat</h2>}
-          {activeTab === 'recipe-generator' && <h2>Recipe Generator</h2>}
+          {activeTab === 'image-generator' &&  <ImageGenerator/> }
+          {activeTab === 'chat' && <ChatComponent/>}
+          {activeTab === 'recipe-generator' &&  <RecipeGenerator/>}
         </div>
 
 
