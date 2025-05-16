@@ -21,7 +21,7 @@ const [ activeTab, setActiveTab] = useState('image-generator')
           Image Generator</button>      
         <button className={activeTab === 'chat' ? 'active' : ''}
         onClick={() => handleTabChange('chat')}>
-          Chat</button>
+          Ask AI</button>
         <button className={activeTab === 'recipe-generator' ? 'active' : ''}
         onClick={() => handleTabChange('recipe-generator')}>
           Recipe Generator</button>
